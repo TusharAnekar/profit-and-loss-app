@@ -16,13 +16,14 @@ function calculateProfitAndLoss (initial, quantity, current) {
         result.innerText = "Please enter all the values in fields.";
     }
     else {
-        if (initial < current) {
+        if (Number(current) > Number(initial)) {
             var profit = (current - initial) * quantity;
             var profitPercentage = (profit / (initial * quantity)) * 100;
             result.style.color = "green";
             result.innerText = `Your profit is ${profit.toFixed(2)} and profit percentage is ${profitPercentage.toFixed(2)}%`;
         }
-        else if (initial > current) {
+        else if (Number(initial) > Number(current)) {
+            console.log("You are in loss logic");
             var loss = (initial - current) * quantity;
             var lossPercentage = (loss / (initial * quantity)) * 100;
             result.style.color = "red";
