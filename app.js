@@ -13,7 +13,12 @@ function clickHandler () {
 function calculateProfitAndLoss (initial, quantity, current) {
     
     if (initial === "" || quantity === "" || current === "") {
+        result.style.color = "red";
         result.innerText = "Please enter all the values in fields.";
+    }
+    else if (initial <= 0 || quantity <= 0 || current <= 0) {
+        result.style.color = "red";
+        result.innerText = "Please enter values greater than zero.";
     }
     else {
         if (Number(current) > Number(initial)) {
