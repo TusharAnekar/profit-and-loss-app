@@ -11,5 +11,4 @@ User has to enter all three values in Initial Price, Quantity of Stocks and Curr
     <li>JavaScript</li>
 </ul>
 
-<img src="images/ProfitLoss.PNG">
-
+<img src="/images/ProfitLoss.PNG">
